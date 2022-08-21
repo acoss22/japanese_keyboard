@@ -1,2 +1,2 @@
 # japanese_keyboard
-japanese_keyboard app with nestjs 
+japanese_keyboard app made with reactjs 
