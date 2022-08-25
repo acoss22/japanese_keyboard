@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
- function TextBox(props) {
+ function TextBox(...props) {
     const [message, setMessage] = useState(props.value);
 
     return (
