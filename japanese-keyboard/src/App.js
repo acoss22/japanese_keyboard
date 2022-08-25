@@ -1,7 +1,7 @@
-import TextBox from "./ui_components/TextBoxComponent";
-import CharacterList from "./ui_components/CharacterListComponent";
+import TextBox from "./components/TextBoxComponent";
+import CharacterList from "./components/CharacterListComponent";
 import React, { useState } from "react";
-import KanjiSuggestion from './ui_components/KanjiSuggestionComponent';
+import KanjiSuggestion from './components/KanjiSuggestionComponent';
 import {hiraganas} from './hiraganaList';
 
 function App() {
