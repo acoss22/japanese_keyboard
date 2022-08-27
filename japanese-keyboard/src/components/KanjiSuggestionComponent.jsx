@@ -1,7 +1,9 @@
 import styles from './kanjiSuggestion.module.css';
+import {getKanjiSuggestions} from '../utils/suggestionsEngine';
 
 function KanjiSuggestion(props) {
-
+    const suggestions = getKanjiSuggestions(props.word);
+    
     return (
         <div className={styles.container}>
             <div>
@@ -16,9 +18,18 @@ function KanjiSuggestion(props) {
                 <div>
                     <span>Suggestions:</span>
                 </div>
-                <button onClick={()=> props.selectedWord('asdfsfasf')}>
-                    asdfsfasf
-                </button>
+                {suggestions.map(function(item, i) {
+                    return <button key={item.kanji} onClick={()=> props.selectedWord(item.Kanji)}>
+                                <>
+                                    {item.Kanji}
+                                    <div>
+                                        {item.Meanings.map(function(meaning, k){
+                                            return meaning + " ";
+                                        })}
+                                    </div>
+                                </>
+                    </button>;
+                })}
             </div>
         </div>
     );
