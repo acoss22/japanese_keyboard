@@ -8,3 +8,4 @@ App made in reactjs
 - Provide a hiragana list to those that do not wish to use the keyboard
 - Convert english text to hiragana and/or kanji (as suggestions)
 - Text to speech 
+- More to be added as the progress goes along...
