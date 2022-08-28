@@ -1,8 +1,8 @@
 import styles from './kanjiSuggestion.module.css';
-import {getKanjiSuggestions} from '../utils/suggestionsEngine';
+import {getKanjiSuggestionsFromHiragana} from '../utils/suggestionsEngine';
 
 function KanjiSuggestion(props) {
-    const suggestions = getKanjiSuggestions(props.word);
+    const suggestions = getKanjiSuggestionsFromHiragana(props.word);
     
     return (
         <div className={styles.container}>

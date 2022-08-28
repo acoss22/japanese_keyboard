@@ -1,6 +1,6 @@
 import kanjis from '../consts/kanjis';
 
-export function getKanjiSuggestions(hiraganaWord){
+export function getKanjiSuggestionsFromHiragana(hiraganaWord){
     let suggestions = [];
     kanjis.forEach((item, i) => {
         if(item.ReadingHiragana.includes(hiraganaWord)){
@@ -10,3 +10,4 @@ export function getKanjiSuggestions(hiraganaWord){
 
     return suggestions;
 }
+
