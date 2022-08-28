@@ -11,3 +11,13 @@ export function getKanjiSuggestionsFromHiragana(hiraganaWord){
     return suggestions;
 }
 
+export function getKanjiSuggestionsFromEnglish(englishWord){
+    let suggestions = [];
+    kanjis.forEach((item, i) => {
+        if(item.Meanings.includes(englishWord)){
+            suggestions.push(item);
+        }
+    });
+
+    return suggestions;
+}
