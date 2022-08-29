@@ -6,3 +6,8 @@
 .kanji {
     float: left;
 }
+
+.label{
+    font-size: 2rem;
+    font-weight: bold;
+}
