@@ -4,3 +4,11 @@
     align-items: center;
     width: 4rem;
 }
+
+.pile > span{
+    font-size: 2rem;
+}
+
+.center{
+    margin: auto;
+}

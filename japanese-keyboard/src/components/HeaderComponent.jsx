@@ -6,7 +6,7 @@ function Header(props) {
     
     return (
         <div className="header">
-            Japanese Keyboard by ACOSS
+            Japanese Keyboard
         </div>
     );
 }
