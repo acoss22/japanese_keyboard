@@ -1,12 +1,13 @@
-import TextBox from "./components/TextBoxComponent";
+import TextAreaBox from "./components/TextAreaBoxComponent";
 import CharacterList from "./components/CharacterListComponent";
 import React, { useState } from "react";
-import Toggle from 'react-toggle'
 import "react-toggle/style.css"
 import KanjiSuggestion from './components/KanjiSuggestionComponent';
 import {hiraganas} from './consts/hiraganaList';
 import Header from './components/HeaderComponent';
 import './App.css';
+import ToggleButton from "./components/ToggleButtonComponent";
+import GenericTutorial from "./components/GenericTutorialComponent";
 
 function App() {
     const [newWord, setNewWord] = useState('');
@@ -17,8 +18,7 @@ function App() {
         setNewWord(newWord + event);
     }
 
-    function selectedWord(word) {
-        console.log('selected word', word);
+    function handleSelectedWord(word) {
         setPhrase(phrase + word);
         setNewWord('');
     }
@@ -27,25 +27,18 @@ function App() {
       setUseKeyboard(!useKeyboard);
     }
 
-
     return (
       <>
         <Header />
         <div className="container">
           <div>
-            <TextBox className="result_text" key={phrase} value={phrase} />
+            <TextAreaBox value={phrase} />
             {(newWord !== '') ? (
-              <KanjiSuggestion data-testid="app-kanji-suggestion" word={newWord} selectedWord={selectedWord}/>
-              ): (<></>)}
+              <KanjiSuggestion data-testid="app-kanji-suggestion" word={newWord} selectedWordHandler={handleSelectedWord}/>
+              ): (<GenericTutorial text="To begin you have to select any hiragana from the list below. After selecting an hiragana the system will attempt to suggest you the corresponding kanjis. You may then pick the word you were writing in hiragana or the suggested kanji"></GenericTutorial>)}
           </div>
           <div className="toggle_div">
-            <label>
-              <Toggle className="pull_right"
-                defaultChecked={useKeyboard}
-                icons={false}
-                onChange={handleToggleKeyboard} />
-              <span className="pull_right">Show keyboard</span>
-            </label>
+            <ToggleButton label="Show Keyboard" value={useKeyboard} showIcons={false} onChange={handleToggleKeyboard}></ToggleButton>
           </div>
           <div>
             {useKeyboard ? (
