@@ -10,7 +10,7 @@ function KanjiSuggestion(props) {
                 <span className={styles.label}>Your word:</span>
             </div>
             <div>
-                <button onClick={()=> props.selectedWord(props.word)}>
+                <button onClick={()=> props.selectedWordHandler(props.word)}>
                     {props.word}
                 </button>
             </div>
@@ -19,7 +19,7 @@ function KanjiSuggestion(props) {
                     <span className={styles.label}>Suggestions:</span>
                 </div>
                 {suggestions.map(function(item, i) {
-                    return <button key={item.kanji} onClick={()=> props.selectedWord(item.Kanji)}>
+                    return <button key={item.kanji} onClick={()=> props.selectedWordHandler(item.Kanji)}>
                                 <>
                                     {item.Kanji}
                                     <div>
