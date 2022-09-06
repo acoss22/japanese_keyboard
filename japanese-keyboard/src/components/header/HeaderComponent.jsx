@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import CharacterSymbolComponent from './CharacterSymbolComponent';
-import '../App.css';
+import React from "react";
+import '../../App.css';
 
 function Header(props) {
     

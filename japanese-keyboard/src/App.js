@@ -1,13 +1,14 @@
-import TextAreaBox from "./components/TextAreaBoxComponent";
-import CharacterList from "./components/CharacterListComponent";
+
 import React, { useState } from "react";
 import "react-toggle/style.css"
-import KanjiSuggestion from './components/KanjiSuggestionComponent';
 import {hiraganas} from './consts/hiraganaList';
-import Header from './components/HeaderComponent';
 import './App.css';
-import ToggleButton from "./components/ToggleButtonComponent";
-import GenericTutorial from "./components/GenericTutorialComponent";
+import Header from './components/header/HeaderComponent';
+import TextAreaBox from './components/text-area/TextAreaBoxComponent';
+import KanjiSuggestion from './components/kanji-suggestion/KanjiSuggestionComponent';
+import GenericTutorial  from './components/generic-tutorial/GenericTutorialComponent';
+import ToggleButton from './components/toogle-button/ToggleButtonComponent';
+import CharacterList from './components/character-list/CharacterListComponent';
 
 function App() {
     const [newWord, setNewWord] = useState('');

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CharacterSymbolComponent from './CharacterSymbolComponent';
+import CharacterSymbolComponent from '../character-symbol/CharacterSymbolComponent';
 import styles from './characterlist.module.css';
 
 function CharacterList(props) {
