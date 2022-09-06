@@ -28,6 +28,10 @@ function App() {
       setUseKeyboard(!useKeyboard);
     }
 
+    function handleCancelSuggestion(){
+      setNewWord('');
+    }
+
     return (
       <>
         <Header />
@@ -35,7 +39,7 @@ function App() {
           <div>
             <TextAreaBox value={phrase} />
             {(newWord !== '') ? (
-              <KanjiSuggestion data-testid="app-kanji-suggestion" word={newWord} selectedWordHandler={handleSelectedWord}/>
+              <KanjiSuggestion data-testid="app-kanji-suggestion" word={newWord} selectedWordHandler={handleSelectedWord} cancelHandler={handleCancelSuggestion}/>
               ): (<GenericTutorial text="To begin you have to select any hiragana from the list below. After selecting an hiragana the system will attempt to suggest you the corresponding kanjis. You may then pick the word you were writing in hiragana or the suggested kanji"></GenericTutorial>)}
           </div>
           <div className="toggle_div">
