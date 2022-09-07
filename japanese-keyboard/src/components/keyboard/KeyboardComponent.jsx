@@ -11,6 +11,10 @@ function KeyboardComponent(props) {
     const toggleHiragana = (e) => {
         setUseHiragana(!useHiragana);
     }
+
+    const handleCharacterKeyPress = (e, character) => {
+        props.handleChange(character);
+    }
     
 
     return (
@@ -19,65 +23,65 @@ function KeyboardComponent(props) {
             (useHiragana && !pressedShift) &&
                 <div>
                     <div className={styles.row}>
-                        <button className={styles.button_10}>ろ</button>
-                        <button className={styles.button_10}>ぬ</button>
-                        <button className={styles.button_10}>ふ</button>
-                        <button className={styles.button_10}>あ</button>
-                        <button className={styles.button_10}>う</button>
-                        <button className={styles.button_10}>え</button>
-                        <button className={styles.button_10}>お</button>
-                        <button className={styles.button_10}>や</button>
-                        <button className={styles.button_10}>ゆ</button>
-                        <button className={styles.button_10}>よ</button>
-                        <button className={styles.button_10}>わ</button>
-                        <button className={styles.button_10}>ほ</button>
-                        <button className={styles.button_10}>へ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ろ")}>ろ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ぬ")}>ぬ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ふ")}>ふ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "あ")}>あ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "う")}>う</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "え")}>え</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "お")}>お</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "や")}>や</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ゆ")}>ゆ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "よ")}>よ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "わ")}>わ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ほ")}>ほ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "へ")}>へ</button>
                         <button className={styles.button_20}>Backspace</button>
                     </div>
                     <div className={styles.row}>
                         <button className={styles.button_20}>Tab</button>
-                        <button className={styles.button_10}>タ</button>
-                        <button className={styles.button_10}>テ</button>
-                        <button className={styles.button_10}>イ</button>
-                        <button className={styles.button_10}>ス</button>
-                        <button className={styles.button_10}>カ</button>
-                        <button className={styles.button_10}>ン</button>
-                        <button className={styles.button_10}>ナ</button>
-                        <button className={styles.button_10}>ニ</button>
-                        <button className={styles.button_10}>ラ</button>
-                        <button className={styles.button_10}>せ</button>
-                        <button className={styles.button_10}>゛</button>
-                        <button className={styles.button_10}>゜</button>
-                        <button className={styles.button_10}>む</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "タ")}>タ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "テ")}>テ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "イ")}>イ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ス")}>ス</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "カ")}>カ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ン")}>ン</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ナ")}>ナ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ニ")}>ニ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ラ")}>ラ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "せ")}>せ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "゛")}>゛</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "゜")}>゜</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "む")}>む</button>
                     </div>
                     <div className={styles.row}>
                         <button className={styles.button_20}>Caps Lock</button>
-                        <button className={styles.button_10}>ち</button>
-                        <button className={styles.button_10}>と</button>
-                        <button className={styles.button_10}>し</button>
-                        <button className={styles.button_10}>は</button>
-                        <button className={styles.button_10}>き</button>
-                        <button className={styles.button_10}>く</button>
-                        <button className={styles.button_10}>ま</button>
-                        <button className={styles.button_10}>の</button>
-                        <button className={styles.button_10}>り</button>
-                        <button className={styles.button_10}>り</button>
-                        <button className={styles.button_10}>け</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ち")}>ち</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "と")}>と</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "し")}>し</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "は")}>は</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "き")}>き</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "く")}>く</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ま")}>ま</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "の")}>の</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "り")}>り</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "り")}>り</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "け")}>け</button>
                         <button className={styles.button_20}>Enter</button>
                     </div>
                     <div className={styles.row}>
                         <button className={styles.button_20} onClick={toggleShift}>Shift</button>
-                        <button className={styles.button_10}>む</button>
-                        <button className={styles.button_10}>つ</button>
-                        <button className={styles.button_10}>さ</button>
-                        <button className={styles.button_10}>そ</button>
-                        <button className={styles.button_10}>ひ</button>
-                        <button className={styles.button_10}>こ</button>
-                        <button className={styles.button_10}>み</button>
-                        <button className={styles.button_10}>も</button>
-                        <button className={styles.button_10}>ね</button>
-                        <button className={styles.button_10}>る</button>
-                        <button className={styles.button_10}>め</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "む")}>む</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "つ")}>つ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "さ")}>さ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "そ")}>そ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ひ")}>ひ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "こ")}>こ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "み")}>み</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "も")}>も</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ね")}>ね</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "る")}>る</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "め")}>め</button>
                         <button className={styles.button_20} onClick={toggleShift}>Shift</button>
                     </div>
                     <div className={styles.row}>
@@ -96,15 +100,15 @@ function KeyboardComponent(props) {
                         <button className={styles.button_10}></button>
                         <button className={styles.button_10}></button>
                         <button className={styles.button_10}></button>
-                        <button className={styles.button_10}>ぁ</button>
-                        <button className={styles.button_10}>ぅ</button>
-                        <button className={styles.button_10}>ぇ</button>
-                        <button className={styles.button_10}>ぉ</button>
-                        <button className={styles.button_10}>ゃ</button>
-                        <button className={styles.button_10}>ゅ</button>
-                        <button className={styles.button_10}>ょ</button>
-                        <button className={styles.button_10}>を</button>
-                        <button className={styles.button_10}>ー</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ぁ")}>ぁ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ぅ")}>ぅ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ぇ")}>ぇ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ぉ")}>ぉ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ゃ")}>ゃ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ゅ")}>ゅ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ょ")}>ょ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "を")}>を</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ー")}>ー</button>
                         <button className={styles.button_10}></button>
                         <button className={styles.button_20}>Backspace</button>
                     </div>
@@ -112,7 +116,7 @@ function KeyboardComponent(props) {
                         <button className={styles.button_20}>Tab</button>
                         <button className={styles.button_10}></button>
                         <button className={styles.button_10}></button>
-                        <button className={styles.button_10}>ぃ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ぃ")}>ぃ</button>
                         <button className={styles.button_10}></button>
                         <button className={styles.button_10}></button>
                         <button className={styles.button_10}></button>
@@ -120,8 +124,8 @@ function KeyboardComponent(props) {
                         <button className={styles.button_10}></button>
                         <button className={styles.button_10}></button>
                         <button className={styles.button_10}></button>
-                        <button className={styles.button_10}>「</button>
-                        <button className={styles.button_10}>」</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "「")}>「</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "」")}>」</button>
                         <button className={styles.button_10}></button>
                     </div>
                     <div className={styles.row}>
@@ -143,16 +147,16 @@ function KeyboardComponent(props) {
                    
                         <button className={styles.button_20} onClick={toggleShift}>Shift</button>
                         <button className={styles.button_10}></button>
-                        <button className={styles.button_10}>っ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "っ")}>っ</button>
                         <button className={styles.button_10}></button>
                         <button className={styles.button_10}></button>
                         <button className={styles.button_10}></button>
                         <button className={styles.button_10}></button>
                         <button className={styles.button_10}></button>
                         <button className={styles.button_10}></button>
-                        <button className={styles.button_10}>、</button>
-                        <button className={styles.button_10}>。</button>
-                        <button className={styles.button_10}>・</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "、")}>、</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "。")}>。</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "・")}>・</button>
                         <button className={styles.button_10} onClick={toggleShift}>Shift</button>
                     </div>
                     <div className={styles.row}>
@@ -168,65 +172,65 @@ function KeyboardComponent(props) {
             (!useHiragana && !pressedShift) &&
                 <div>
                     <div className={styles.row}>
-                        <button className={styles.button_10}>ロ</button>
-                        <button className={styles.button_10}>ヌ</button>
-                        <button className={styles.button_10}>フ</button>
-                        <button className={styles.button_10}>ア</button>
-                        <button className={styles.button_10}>ウ</button>
-                        <button className={styles.button_10}>エ</button>
-                        <button className={styles.button_10}>オ</button>
-                        <button className={styles.button_10}>ヤ</button>
-                        <button className={styles.button_10}>ユ</button>
-                        <button className={styles.button_10}>ヨ</button>
-                        <button className={styles.button_10}>ワ</button>
-                        <button className={styles.button_10}>ホ</button>
-                        <button className={styles.button_10}>ヘ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ロ")}>ロ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ヌ")}>ヌ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "フ")}>フ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ア")}>ア</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ウ")}>ウ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "エ")}>エ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "オ")}>オ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ヤ")}>ヤ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ユ")}>ユ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ヨ")}>ヨ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ワ")}>ワ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ホ")}>ホ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ヘ")}>ヘ</button>
                         <button className={styles.button_20}>Backspace</button>
                     </div>
                     <div className={styles.row}>
                         <button className={styles.button_20}>Tab</button>
-                        <button className={styles.button_10}>タ</button>
-                        <button className={styles.button_10}>テ</button>
-                        <button className={styles.button_10}>イ</button>
-                        <button className={styles.button_10}>ス</button>
-                        <button className={styles.button_10}>カ</button>
-                        <button className={styles.button_10}>ン</button>
-                        <button className={styles.button_10}>ナ</button>
-                        <button className={styles.button_10}>ニ</button>
-                        <button className={styles.button_10}>ラ</button>
-                        <button className={styles.button_10}>セ</button>
-                        <button className={styles.button_10}>゛</button>
-                        <button className={styles.button_10}>゜</button>
-                        <button className={styles.button_10}>ム</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "タ")}>タ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "テ")}>テ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "イ")}>イ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ス")}>ス</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "カ")}>カ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ン")}>ン</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ナ")}>ナ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ニ")}>ニ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ラ")}>ラ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "セ")}>セ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "゛")}>゛</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "゜")}>゜</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ム")}>ム</button>
                     </div>
                     <div className={styles.row}>
                         <button className={styles.button_20}>Caps Lock</button>
-                        <button className={styles.button_10}>チ</button>
-                        <button className={styles.button_10}>ト</button>
-                        <button className={styles.button_10}>シ</button>
-                        <button className={styles.button_10}>ハ</button>
-                        <button className={styles.button_10}>キ</button>
-                        <button className={styles.button_10}>ク</button>
-                        <button className={styles.button_10}>マ</button>
-                        <button className={styles.button_10}>ノ</button>
-                        <button className={styles.button_10}>リ</button>
-                        <button className={styles.button_10}>レ</button>
-                        <button className={styles.button_10}>ケ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "チ")}>チ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ト")}>ト</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "シ")}>シ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ハ")}>ハ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "キ")}>キ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ク")}>ク</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "マ")}>マ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ノ")}>ノ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "リ")}>リ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "レ")}>レ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ケ")}>ケ</button>
                         <button className={styles.button_20}>Enter</button>
                     </div>
                     <div className={styles.row}>
                         <button className={styles.button_20} onClick={toggleShift}>Shift</button>
-                        <button className={styles.button_10}>ム</button>
-                        <button className={styles.button_10}>ツ</button>
-                        <button className={styles.button_10}>サ</button>
-                        <button className={styles.button_10}>ソ</button>
-                        <button className={styles.button_10}>ヒ</button>
-                        <button className={styles.button_10}>コ</button>
-                        <button className={styles.button_10}>ミ</button>
-                        <button className={styles.button_10}>モ</button>
-                        <button className={styles.button_10}>ネ</button>
-                        <button className={styles.button_10}>ル</button>
-                        <button className={styles.button_10}>メ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ム")}>ム</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ツ")}>ツ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "サ")}>サ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ソ")}>ソ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ヒ")}>ヒ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "コ")}>コ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ミ")}>ミ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "モ")}>モ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ネ")}>ネ</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ル")}>ル</button>
+                        <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "メ")}>メ</button>
                         <button className={styles.button_10} onClick={toggleShift}>Shift</button>
                     </div>
                     <div className={styles.row}>
@@ -245,15 +249,15 @@ function KeyboardComponent(props) {
                             <button className={styles.button_10}></button>
                             <button className={styles.button_10}></button>
                             <button className={styles.button_10}></button>
-                            <button className={styles.button_10}>ァ</button>
-                            <button className={styles.button_10}>ゥ</button>
-                            <button className={styles.button_10}>ェ</button>
-                            <button className={styles.button_10}>ォ</button>
-                            <button className={styles.button_10}>ャ</button>
-                            <button className={styles.button_10}>ュ</button>
-                            <button className={styles.button_10}>ョ</button>
-                            <button className={styles.button_10}>ヲ</button>
-                            <button className={styles.button_10}>ー</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ァ")}>ァ</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ゥ")}>ゥ</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ェ")}>ェ</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ォ")}>ォ</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ャ")}>ャ</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ュ")}>ュ</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ョ")}>ョ</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ヲ")}>ヲ</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ー")}>ー</button>
                             <button className={styles.button_10}></button>
                             <button className={styles.button_20}>Backspace</button>
                         </div>
@@ -261,7 +265,7 @@ function KeyboardComponent(props) {
                             <button className={styles.button_20}>Tab</button>
                             <button className={styles.button_10}></button>
                             <button className={styles.button_10}></button>
-                            <button className={styles.button_10}>ィ</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ィ")}>ィ</button>
                             <button className={styles.button_10}></button>
                             <button className={styles.button_10}></button>
                             <button className={styles.button_10}></button>
@@ -269,8 +273,8 @@ function KeyboardComponent(props) {
                             <button className={styles.button_10}></button>
                             <button className={styles.button_10}></button>
                             <button className={styles.button_10}></button>
-                            <button className={styles.button_10}>「</button>
-                            <button className={styles.button_10}>」</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "「")}>「</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "」")}>」</button>
                             <button className={styles.button_10}></button>
                         </div>
                         <div className={styles.row}>
@@ -291,16 +295,16 @@ function KeyboardComponent(props) {
                         <div className={styles.row}>
                             <button className={styles.button_20} onClick={toggleShift}>Shift</button>
                             <button className={styles.button_10}></button>
-                            <button className={styles.button_10}>ﾂ</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "ﾂ")}>ﾂ</button>
                             <button className={styles.button_10}></button>
                             <button className={styles.button_10}></button>
                             <button className={styles.button_10}></button>
                             <button className={styles.button_10}></button>
                             <button className={styles.button_10}></button>
                             <button className={styles.button_10}></button>
-                            <button className={styles.button_10}>、</button>
-                            <button className={styles.button_10}>。</button>
-                            <button className={styles.button_10}>・</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "、")}>、</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "。")}>。</button>
+                            <button className={styles.button_10} onClick={e => handleCharacterKeyPress(e, "・")}>・</button>
                             <button className={styles.button_10} onClick={toggleShift}>Shift</button>
                         </div>
                         <div className={styles.row}>

@@ -48,7 +48,7 @@ function App() {
           </div>
           <div>
             {useKeyboard ? (
-              <KeyboardComponent></KeyboardComponent>
+              <KeyboardComponent handleChange={handleChange}></KeyboardComponent>
               ) : (
                 <CharacterList data-testid="app-hiragana-list" characters={hiraganas} rows={6} handleChange={handleChange} />
                 ) 
