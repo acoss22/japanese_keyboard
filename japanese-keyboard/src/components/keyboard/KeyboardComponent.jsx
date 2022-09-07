@@ -158,7 +158,7 @@ function KeyboardComponent(props) {
                     <div className={styles.row}>
                         <button className={styles.button_10}>Ctrl</button>
                         <button className={styles.button_10}>Alt</button>
-                        <button className={styles.button_60} onClick={toggleHiragana}>Hiragana/Katakana</button>
+                        <button className={styles.button_110} onClick={toggleHiragana}>Hiragana/Katakana</button>
                         <button className={styles.button_10}>Alt</button>
                         <button className={styles.button_10}>Ctrl</button>
                     </div>
@@ -232,7 +232,7 @@ function KeyboardComponent(props) {
                     <div className={styles.row}>
                         <button className={styles.button_10}>Ctrl</button>
                         <button className={styles.button_10}>Alt</button>
-                        <button className={styles.button_60} onClick={toggleHiragana}>Hiragana/Katakana</button>
+                        <button className={styles.button_110} onClick={toggleHiragana}>Hiragana/Katakana</button>
                         <button className={styles.button_10}>Alt</button>
                         <button className={styles.button_10}>Ctrl</button>
                     </div>
@@ -306,7 +306,7 @@ function KeyboardComponent(props) {
                         <div className={styles.row}>
                         <button className={styles.button_10}>Ctrl</button>
                         <button className={styles.button_10}>Alt</button>
-                        <button className={styles.button_60} onClick={toggleHiragana}>Hiragana/Katakana</button>
+                        <button className={styles.button_110} onClick={toggleHiragana}>Hiragana/Katakana</button>
                         <button className={styles.button_10}>Alt</button>
                         <button className={styles.button_10}>Ctrl</button>
                         </div>
