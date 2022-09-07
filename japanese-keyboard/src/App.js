@@ -9,6 +9,7 @@ import KanjiSuggestion from './components/kanji-suggestion/KanjiSuggestionCompon
 import GenericTutorial  from './components/generic-tutorial/GenericTutorialComponent';
 import ToggleButton from './components/toogle-button/ToggleButtonComponent';
 import CharacterList from './components/character-list/CharacterListComponent';
+import KeyboardComponent from "./components/keyboard/KeyboardComponent";
 
 function App() {
     const [newWord, setNewWord] = useState('');
@@ -47,7 +48,7 @@ function App() {
           </div>
           <div>
             {useKeyboard ? (
-              <div>Keyboard should show here. To be implemented</div>
+              <KeyboardComponent></KeyboardComponent>
               ) : (
                 <CharacterList data-testid="app-hiragana-list" characters={hiraganas} rows={6} handleChange={handleChange} />
                 ) 
