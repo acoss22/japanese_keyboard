@@ -265,6 +265,100 @@ const katakana = [
         symbol: "ヲ",
         romanji: "wo",
     },
-
-
+    {
+        symbol: "キャ",
+        romanji: "kya",
+    },
+    {
+        symbol: "キュ",
+        romanji: "kyu",
+    },
+    {
+        symbol: "キョ",
+        romanji: "kyo",
+    },
+    {
+        symbol: "シャ",
+        romanji: "sha",
+    }, 
+    {
+        symbol: "シュ",
+        romanji: "shu",
+    },
+    {
+        symbol: "ショ",
+        romanji: "sho",
+    },
+    {
+        symbol: "チャ",
+        romanji: "cha",
+    },
+    {
+        symbol: "チュ",
+        romanji: "chu",
+    },
+    {
+        symbol: "チョ",
+        romanji: "cho",
+    },
+    {
+        symbol: "ニャ",
+        romanji: "nya",
+    }, 
+    {
+        symbol: "ニュ",
+        romanji: "nyu",
+    },
+    {
+        symbol: "ニョ",
+        romanji: "nyo",
+    },
+    {
+        symbol: "ヒャ",
+        romanji: "hya",
+    },
+    {
+        symbol: "ヒュ",
+        romanji: "hyu",
+    },
+    {
+        symbol: "ヒョ",
+        romanji: "hyo",
+    },
+    {
+        symbol: "ミャ",
+        romanji: "mya",
+    },
+    {
+        symbol: "ミュ",
+        romanji: "myu",
+    },
+    {
+        symbol: "ミョ",
+        romanji: "myo",
+    },
+    {
+        symbol: "リャ",
+        romanji: "rya",
+    },
+    {
+        symbol: "リュ",
+        romanji: "ryu",
+    },
+    {
+        symbol: "リョ",
+        romanji: "ryo",
+    },
+    {
+        symbol: "ギャ",
+        romanji: "gya",
+    },
+    {
+        symbol: "ギュ",
+        romanji: "gyu",
+    },
+    {
+        symbol: "ギョ",
+        romanji: "gyo",
+    },
 ];
