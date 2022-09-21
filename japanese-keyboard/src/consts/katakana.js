@@ -361,4 +361,52 @@ const katakana = [
         symbol: "ギョ",
         romanji: "gyo",
     },
+    {
+        symbol: "ジャ",
+        romanji: "ja",
+    },
+    {
+        symbol: "ジュ",
+        romanji: "ju",
+    },
+    {
+        symbol: "ジョ",
+        romanji: "jo",
+    },
+    {
+        symbol: "ヂャ",
+        romanji: "ja",
+    },
+    {
+        symbol: "ヂュ",
+        romanji: "ju",
+    },
+    {
+        symbol: "ヂョ",
+        romanji: "jo",
+    },
+    {
+        symbol: "ビャ",
+        romanji: "bya",
+    },
+    {
+        symbol: "ビュ",
+        romanji: "byu",
+    },
+    {
+        symbol: "ビョ",
+        romanji: "byo",
+    },
+    {
+        symbol: "ピャ",
+        romanji: "pya",
+    },
+    {
+        symbol: "ピュ",
+        romanji: "pyu",
+    },
+    {
+        symbol: "ピョ",
+        romanji: "pyo",
+    },
 ];
