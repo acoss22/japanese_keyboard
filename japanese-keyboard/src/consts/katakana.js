@@ -1,4 +1,4 @@
-const katakana = [
+export const katakana = [
     {
         symbol: "ア",
         romanji: "a",

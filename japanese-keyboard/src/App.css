@@ -83,3 +83,13 @@ button:focus {
   font-size: 3rem;
   color: black;
 }
+
+.label {
+  font-size: 2rem;
+  margin-top: 2rem;
+  
+}
+.right {
+  float: right;
+  font-size: 2rem;
+}
