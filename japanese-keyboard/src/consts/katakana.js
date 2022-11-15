@@ -128,6 +128,10 @@ export const katakana = [
         romanji: "to",
     },
     {
+        symbol: "ン",
+        romanji: "n",
+    },
+    {
         symbol: "ナ",
         romanji: "na",
     },
