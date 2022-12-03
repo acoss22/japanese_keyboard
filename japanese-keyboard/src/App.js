@@ -36,7 +36,6 @@ function App() {
   }
 
   function handleOnDelete() {
-    console.log('handleOnDelete');
     setPhrase(phrase.slice(0, -1));
   }
 

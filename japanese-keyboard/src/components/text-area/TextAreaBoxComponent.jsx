@@ -4,9 +4,7 @@ import '../../App.css';
 const TextAreaBox = (props ) => {
     
     function handleKeyPress(e) {
-        console.log('handleKeyPress', e.keyCode);
         if(e.keyCode === 8 || e.keyCode === 46){
-            console.log('handleKeyPress IF ', e.keyCode);
             props.onDeletePressed();
         }
     }
