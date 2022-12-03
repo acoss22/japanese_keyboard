@@ -36,19 +36,20 @@ function App() {
   }
 
   function handleOnDelete() {
+    console.log('handleOnDelete');
     setPhrase(phrase.slice(0, -1));
   }
-  
+
   return (
     <>
       <Header />
       <div className="container">
         <div>
-          <button className="toggle_div right" onClick={handleOnDelete}>
-        DELETE
+          <button className="toggle_div right" onClick={handleOnDelete} >
+            DELETE
 
-            </button>
-          <TextAreaBox value={phrase} />
+          </button>
+          <TextAreaBox value={phrase} onDeletePressed={handleOnDelete} />
           {(newWord !== '') ? (
             <KanjiSuggestion data-testid="app-kanji-suggestion" word={newWord} selectedWordHandler={handleSelectedWord} cancelHandler={handleCancelSuggestion} />
           ) : (<GenericTutorial text="To begin you have to select any hiragana from the list below. After selecting an hiragana the system will attempt to suggest you the corresponding kanjis. You may then pick the word you were writing in hiragana or the suggested kanji"></GenericTutorial>)}
