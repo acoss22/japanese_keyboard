@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/japanese_keyboard/static/css/main.42b75051.css",
+    "main.js": "/japanese_keyboard/static/js/main.20c1df08.js",
+    "static/js/787.bb1b0022.chunk.js": "/japanese_keyboard/static/js/787.bb1b0022.chunk.js",
+    "index.html": "/japanese_keyboard/index.html",
+    "main.42b75051.css.map": "/japanese_keyboard/static/css/main.42b75051.css.map",
+    "main.20c1df08.js.map": "/japanese_keyboard/static/js/main.20c1df08.js.map",
+    "787.bb1b0022.chunk.js.map": "/japanese_keyboard/static/js/787.bb1b0022.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42b75051.css",
+    "static/js/main.20c1df08.js"
+  ]
+}
