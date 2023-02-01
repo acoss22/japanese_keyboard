@@ -10,7 +10,7 @@ import KanjiSuggestion from './components/kanji-suggestion/KanjiSuggestionCompon
 import GenericTutorial from './components/generic-tutorial/GenericTutorialComponent';
 import ToggleButton from './components/toogle-button/ToggleButtonComponent';
 import CharacterList from './components/character-list/CharacterListComponent';
-
+import Footer from './components/footer/FooterComponent';
 
 function App() {
 
@@ -72,6 +72,7 @@ function App() {
           }
         </div>
       </div>
+      <Footer />
     </>
 
   );
