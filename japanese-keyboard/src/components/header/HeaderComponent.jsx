@@ -1,11 +1,13 @@
 import React from "react";
-import '../../App.css';
+import styles from './header.module.scss';
 
-function Header(props) {
-    
+const Header = () => {
+
     return (
-        <div className="header">
-            Japanese Keyboard
+        <div className={styles.wrapper}>
+            <div className={styles.header}>
+                Japanese Keyboard
+            </div>
         </div>
     );
 }

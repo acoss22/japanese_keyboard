@@ -1,0 +1,14 @@
+@import "src/styles/variables";
+
+.wrapper {
+  font-size: $fontSizeHeader;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: $header-height;
+  width: 100%;
+  background: linear-gradient(to right, #f7b7de, #ffcceb, #fc90d2);
+}

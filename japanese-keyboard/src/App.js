@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import "react-toggle/style.css"
 import { hiraganas } from './consts/hiraganaList';
 import { katakana } from './consts/katakana';
-import './App.css';
 import Header from './components/header/HeaderComponent';
 import TextAreaBox from './components/text-area/TextAreaBoxComponent';
 import KanjiSuggestion from './components/kanji-suggestion/KanjiSuggestionComponent';
@@ -11,6 +10,7 @@ import GenericTutorial from './components/generic-tutorial/GenericTutorialCompon
 import ToggleButton from './components/toogle-button/ToggleButtonComponent';
 import CharacterList from './components/character-list/CharacterListComponent';
 import Footer from './components/footer/FooterComponent';
+import styles from './app.module.scss';
 
 function App() {
 
@@ -40,23 +40,22 @@ function App() {
   }
 
   return (
-    <>
+    <div className={styles.main}>
       <Header />
-      <div className="container">
-        <div>
-          <button className="toggle_div right" onClick={handleOnDelete} >
+      <div className={styles.container}>
+          <TextAreaBox classname={styles.area} value={phrase} onDeletePressed={handleOnDelete} />
+          <button className={styles.btnDel} onClick={handleOnDelete} >
             DELETE
-
           </button>
-          <TextAreaBox value={phrase} onDeletePressed={handleOnDelete} />
           {(newWord !== '') ? (
             <KanjiSuggestion data-testid="app-kanji-suggestion" word={newWord} selectedWordHandler={handleSelectedWord} cancelHandler={handleCancelSuggestion} />
           ) : (<GenericTutorial text="To begin you have to select any hiragana from the list below. After selecting an hiragana the system will attempt to suggest you the corresponding kanjis. You may then pick the word you were writing in hiragana or the suggested kanji"></GenericTutorial>)}
-        </div>
-        <div className="toggle_div">
+       
+        <div>
           <ToggleButton label="Show Keyboard" value={useKeyboard} showIcons={false} onChange={handleToggleKeyboard}></ToggleButton>
         </div>
         <div>
+
           {useKeyboard ? (
             <div>Keyboard should show here. To be implemented</div>
           ) : (
@@ -73,7 +72,8 @@ function App() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
+    
 
   );
 }

@@ -7,7 +7,7 @@ const FooterComponent = () => {
             <div className={styles.footer_container}>
                 <div className={styles.footer}>
                     © 2023 Ana Sequeira
-                    <span className={styles.copyright}>All rights reserved.</span>
+                    <span className={styles.copyright}> All rights reserved.</span>
                 </div>
             </div>
         </div>

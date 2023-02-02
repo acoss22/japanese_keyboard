@@ -1,0 +1,81 @@
+@import "src/styles/variables";
+
+.main {
+  padding-top: $header-height;
+  padding-bottom: $footer-height;
+  height: calc(100% - $header-height - $footer-height);
+  font-size: 2rem;
+  line-height: 1.15;
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .btnDel{
+      width: 12rem;
+      height: 4rem;
+      margin: 0.15rem 0;
+    }
+  }
+}
+
+button {
+  margin: 0.2rem;
+  padding: 0.7rem 1rem;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.4rem;
+  box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 0.5),
+    0px 0px 10px rgba(0, 0, 0, 0.15);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 0) 5%,
+    rgba(255, 255, 255, 0.5) 6%,
+    rgba(255, 255, 255, 0) 9%,
+    rgba(255, 255, 255, 0.5) 10%,
+    rgba(255, 255, 255, 0) 17%,
+    rgba(255, 255, 255, 0.5) 19%,
+    rgba(255, 255, 255, 0) 21%
+  );
+  background-size: 150%;
+  background-position: right;
+  transition: 1s;
+}
+
+button:hover {
+  background-position: left;
+  color: white;
+  box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 1),
+    0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+button:focus {
+  outline: none;
+}
+
+.toggle_div {
+  height: 4rem;
+}
+
+.header {
+  padding: 2rem;
+  text-align: center;
+  border-bottom: black;
+  color: white;
+  font-size: 3rem;
+  color: black;
+}
+
+.label {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.right {
+  float: right;
+  font-size: 2rem;
+}

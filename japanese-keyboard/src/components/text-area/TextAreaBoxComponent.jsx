@@ -1,7 +1,9 @@
 import React from "react";
-import '../../App.css';
+import styles from './textarea.module.scss';
 
 const TextAreaBox = (props ) => {
+
+    const {classname} = props;
     
     function handleKeyPress(e) {
         if(e.keyCode === 8 || e.keyCode === 46){
@@ -10,7 +12,7 @@ const TextAreaBox = (props ) => {
     }
     
     return (
-        <textarea className="result_text" value={props.value} onKeyDown={e => handleKeyPress(e)} ></textarea>
+        <textarea className={styles.container} value={props.value} onKeyDown={e => handleKeyPress(e)} ></textarea>
     );
 }
 
