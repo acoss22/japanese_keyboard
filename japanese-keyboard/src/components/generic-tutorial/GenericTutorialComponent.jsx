@@ -1,4 +1,4 @@
-import styles from './genericTutorial.module.css';
+import styles from './genericTutorial.module.scss';
 
 function GenericTutorial(props) {
     

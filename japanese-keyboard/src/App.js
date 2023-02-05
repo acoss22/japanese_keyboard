@@ -41,10 +41,10 @@ function App() {
 
   return (
     <>
-    <Header />
-    <div className={styles.main}>
-  
-      <div className={styles.container}>
+      <Header />
+      <div className={styles.main}>
+
+        <div className={styles.container}>
           <TextAreaBox classname={styles.area} value={phrase} onDeletePressed={handleOnDelete} />
           <button className={styles.btnDel} onClick={handleOnDelete} >
             DELETE
@@ -52,29 +52,27 @@ function App() {
           {(newWord !== '') ? (
             <KanjiSuggestion data-testid="app-kanji-suggestion" word={newWord} selectedWordHandler={handleSelectedWord} cancelHandler={handleCancelSuggestion} />
           ) : (<GenericTutorial text="To begin you have to select any hiragana from the list below. After selecting an hiragana the system will attempt to suggest you the corresponding kanjis. You may then pick the word you were writing in hiragana or the suggested kanji"></GenericTutorial>)}
-       
-        <div>
-          <ToggleButton label="Show Keyboard" value={useKeyboard} showIcons={false} onChange={handleToggleKeyboard}></ToggleButton>
+
+          <div>
+            <ToggleButton label="Show Keyboard" className={styles.toogle} value={useKeyboard} showIcons={false} onChange={handleToggleKeyboard}></ToggleButton>
+          </div>
+          <div>
+
+            {useKeyboard && (
+              <>
+                <div className="toggle_div label">HIRAGANA</div>
+
+                <CharacterList data-testid="app-hiragana-list" characters={hiraganas} rows={6} handleChange={handleChange} />
+
+                <div className="toggle_div label">KATAKANA</div>
+                <CharacterList data-testid="app-kataka-list" characters={katakana} rows={6} handleChange={handleChange} />
+              </>
+            )
+            }
+          </div>
         </div>
-        <div>
-
-          {useKeyboard ? (
-            <div>Keyboard should show here. To be implemented</div>
-          ) : (
-            <>
-              <div className="toggle_div label">HIRAGANA</div>
-
-              <CharacterList data-testid="app-hiragana-list" characters={hiraganas} rows={6} handleChange={handleChange} />
-
-              <div className="toggle_div label">KATAKANA</div>
-              <CharacterList data-testid="app-kataka-list" characters={katakana} rows={6} handleChange={handleChange} />
-            </>
-          )
-          }
-        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
     </>
 
   );
