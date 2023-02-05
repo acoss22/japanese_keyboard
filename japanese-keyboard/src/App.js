@@ -40,8 +40,10 @@ function App() {
   }
 
   return (
+    <>
+    <Header />
     <div className={styles.main}>
-      <Header />
+  
       <div className={styles.container}>
           <TextAreaBox classname={styles.area} value={phrase} onDeletePressed={handleOnDelete} />
           <button className={styles.btnDel} onClick={handleOnDelete} >
@@ -73,7 +75,7 @@ function App() {
       </div>
       <Footer />
     </div>
-    
+    </>
 
   );
 }

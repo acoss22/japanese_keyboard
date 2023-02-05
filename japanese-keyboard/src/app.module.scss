@@ -3,6 +3,7 @@
 .main {
   padding-top: $header-height;
   padding-bottom: $footer-height;
+  padding: $header-height 10rem $footer-height;
   height: calc(100% - $header-height - $footer-height);
   font-size: 2rem;
   line-height: 1.15;
