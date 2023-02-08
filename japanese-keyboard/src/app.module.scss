@@ -1,24 +1,36 @@
 @import "src/styles/variables";
 
-.main {
-  padding-top: $header-height;
-  padding-bottom: $footer-height;
-  padding: $header-height 10rem $footer-height;
-  height: calc(100% - $header-height - $footer-height);
-  font-size: 2rem;
-  line-height: 1.15;
-  
-  .container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    .btnDel{
-      width: 12rem;
-      height: 4rem;
-      margin: 0.15rem 0;
+  .main {
+    height: calc(100% - $header-height - $footer-height);
+    font-size: 2rem;
+    line-height: 1.15;
+    max-width: 76rem;
+
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 5rem;
+
+      .kanjiContainer {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 5rem 0;
+      }
+
+      .btnDel {
+        width: 12rem;
+        height: 4rem;
+        margin: 0.15rem 0;
+      }
     }
   }
 }
@@ -59,10 +71,6 @@ button:focus {
   outline: none;
 }
 
-.toggle_div {
-  height: 4rem;
-}
-
 .header {
   padding: 2rem;
   text-align: center;
@@ -72,16 +80,13 @@ button:focus {
   color: black;
 }
 
-.label {
+.keyboardTitle {
+  height: 4rem;
   font-size: 2rem;
-  margin-top: 2rem;
+  margin: 5rem;
 }
+
 .right {
   float: right;
   font-size: 2rem;
-}
-
-.toogle{
-  padding-bottom: 5rem;
-  background-color: red;
 }
