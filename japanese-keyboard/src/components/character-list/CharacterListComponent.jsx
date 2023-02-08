@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CharacterSymbolComponent from '../character-symbol/CharacterSymbolComponent';
 import styles from './characterlist.module.css';
 

@@ -57,13 +57,10 @@ function App() {
             <ToggleButton label="Show Keyboards" className={styles.toogle} value={useKeyboard} showIcons={false} onChange={handleToggleKeyboard}></ToggleButton>
           </div>
           <div>
-
             {useKeyboard && (
               <>
                 <div className="keyboardTitle">HIRAGANA</div>
-
                 <CharacterList data-testid="app-hiragana-list" characters={hiraganas} rows={6} handleChange={handleChange} />
-
                 <div className="keyboardTitle">KATAKANA</div>
                 <CharacterList data-testid="app-kataka-list" characters={katakana} rows={6} handleChange={handleChange} />
               </>

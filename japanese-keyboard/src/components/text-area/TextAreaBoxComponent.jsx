@@ -2,8 +2,6 @@ import React from "react";
 import styles from './textarea.module.scss';
 
 const TextAreaBox = (props ) => {
-
-    const {classname} = props;
     
     function handleKeyPress(e) {
         if(e.keyCode === 8 || e.keyCode === 46){

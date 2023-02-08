@@ -10,7 +10,6 @@ function KanjiSuggestion(props) {
 
     return (
         <div className={styles.container}>
-
             <div>
                 <span className={styles.label}>Your word:</span>
             </div>
@@ -19,7 +18,6 @@ function KanjiSuggestion(props) {
                     {props.word}
                 </button>
             </div>
-
             <div className={styles.kanji}>
                 <div>
                     <span className={styles.label}>Suggestions:</span>
