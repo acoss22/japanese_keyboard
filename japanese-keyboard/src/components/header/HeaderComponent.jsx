@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
 import styles from './header.module.scss';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+const { t } = useTranslation();
 
     return (
         <div className={styles.wrapper}>
