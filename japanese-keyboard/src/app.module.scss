@@ -6,18 +6,16 @@
   justify-content: center;
 
   .main {
-    height: calc(100% - $header-height - $footer-height);
+    height: calc(100% - $headerHeight - $footerHeight);
     font-size: 2rem;
     line-height: 1.15;
     max-width: 76rem;
+    padding-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-top: 5rem;
 
       .kanjiContainer {
         display: flex;
@@ -31,7 +29,7 @@
         height: 4rem;
         margin: 0.15rem 0;
       }
-    }
+    
   }
 }
 
@@ -70,8 +68,6 @@ button:hover {
 button:focus {
   outline: none;
 }
-
-
 
 .keyboardTitle {
   height: 4rem;

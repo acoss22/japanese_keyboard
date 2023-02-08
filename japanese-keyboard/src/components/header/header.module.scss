@@ -1,23 +1,19 @@
 @import "src/styles/variables";
 
 .wrapper {
-  font-size: $fontSizeHeader;
   position: fixed;
   top: 0;
+  height: $headerHeight;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: $header-height;
   width: 100%;
-  padding: 2rem;
-  border-bottom: black;
-  font-size: 2rem;
   color: black;
- 
 
   .header{
     font-weight: $fontWeightBold;
+    font-size: $fontSizeHeader;
   }
 
 }
