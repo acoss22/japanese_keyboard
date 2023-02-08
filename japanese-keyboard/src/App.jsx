@@ -54,7 +54,7 @@ function App() {
             ) : (<GenericTutorial text="Select any character or characters from the keyboards and it will be shown to you a suggestion of the corresponding kanjis. Then pick the word from the suggestions."></GenericTutorial>)}
           </div>
           <div>
-            <ToggleButton label="Show Keyboards" className={styles.toogle} value={useKeyboard} showIcons={false} onChange={handleToggleKeyboard}></ToggleButton>
+            <ToggleButton label="Show Keyboards" className={styles.right} value={useKeyboard} showIcons={false} onChange={handleToggleKeyboard}></ToggleButton>
           </div>
           <div>
             {useKeyboard && (
