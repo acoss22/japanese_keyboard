@@ -8,7 +8,7 @@ function CharacterList(props) {
     const columns = Math.ceil(list.length / rows);
     
     return (
-        <div className={styles.center}>
+        <div className={styles.container}>
             {(() => {
                 let renderRows = [];
                 for (let i = 0; i < rows; i++) {
