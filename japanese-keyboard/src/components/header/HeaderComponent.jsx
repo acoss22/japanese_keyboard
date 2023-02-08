@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.header}>
-                Japanese Keyboard
+                JAPANESE KEYBOARD
             </div>
         </div>
     );
