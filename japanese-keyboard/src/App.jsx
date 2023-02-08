@@ -51,7 +51,7 @@ function App() {
           <div className={styles.kanjiContainer}>
             {(newWord !== '') ? (
               <KanjiSuggestion data-testid="app-kanji-suggestion" word={newWord} selectedWordHandler={handleSelectedWord} cancelHandler={handleCancelSuggestion} />
-            ) : (<GenericTutorial text="To begin you have to select any hiragana from the list below. After selecting an hiragana the system will attempt to suggest you the corresponding kanjis. You may then pick the word you were writing in hiragana or the suggested kanji"></GenericTutorial>)}
+            ) : (<GenericTutorial text="Select any character or characters from the keyboards and it will be shown to you a suggestion of the corresponding kanjis. Then pick the word from the suggestions."></GenericTutorial>)}
           </div>
           <div>
             <ToggleButton label="Show Keyboards" className={styles.toogle} value={useKeyboard} showIcons={false} onChange={handleToggleKeyboard}></ToggleButton>
