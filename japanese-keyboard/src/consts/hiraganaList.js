@@ -106,6 +106,10 @@ export const hiraganas = [
         romanji: "tsu",
     },
     {
+        symbol: "っ",
+        romanji: "tsu",
+    },
+    {
         symbol: "て",
         romanji: "te",
     },
