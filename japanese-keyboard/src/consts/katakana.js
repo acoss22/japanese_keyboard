@@ -137,7 +137,11 @@ export const katakana = [
   },
   {
     symbol: "ツ",
-    romanji: "tu",
+    romanji: "tsu",
+  },
+  {
+    symbol: "ッ",
+    romanji: "tsu",
   },
   {
     symbol: "テ",
