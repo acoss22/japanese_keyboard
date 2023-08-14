@@ -5,6 +5,10 @@
     width: 4rem;
 }
 
+.pile:hover {
+   color: #FF69B4
+}
+
 .pile > span{
     font-size: 2rem;
 }

@@ -16,7 +16,7 @@ function App() {
 
   const [newWord, setNewWord] = useState('');
   const [phrase, setPhrase] = useState('');
-  const [useKeyboard, setUseKeyboard] = useState(false);
+  const [useKeyboard, setUseKeyboard] = useState(true);
 
   function handleChange(event) {
     setNewWord(newWord + event);
