@@ -1,5 +1,9 @@
 export const hiraganas = [
     {
+        symbol: "。",
+        romanji: "。",
+    },
+    {
         symbol: "ー",
         romanji: "ー",
     },
