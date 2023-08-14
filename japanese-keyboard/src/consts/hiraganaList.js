@@ -222,11 +222,23 @@ export const hiraganas = [
         romanji: "ya",
     },
     {
+        symbol: "ゃ",
+        romanji: "ya",
+    },
+    {
         symbol: "ゆ",
         romanji: "yu",
     },
     {
+        symbol: "ゅ",
+        romanji: "yu",
+    },
+    {
         symbol: "よ",
+        romanji: "yo",
+    },
+    {
+        symbol: "ょ",
         romanji: "yo",
     },
     {
