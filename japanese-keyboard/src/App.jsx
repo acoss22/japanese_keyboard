@@ -1,6 +1,5 @@
-
-import React, { useState, useEffect } from "react";
-import "react-toggle/style.css"
+import React, { useState } from "react";
+import "react-toggle/style.css";
 import { hiraganas } from './consts/hiraganaList';
 import { katakana } from './consts/katakana';
 import Header from './components/header/HeaderComponent';
@@ -13,20 +12,20 @@ import Footer from './components/footer/FooterComponent';
 import styles from './app.module.scss';
 
 function App() {
-
   const [newWord, setNewWord] = useState('');
   const [phrase, setPhrase] = useState('');
   const [useKeyboard, setUseKeyboard] = useState(true);
+  const [isClipboardDisabled, setIsClipboardDisabled] = useState(true);
 
   function handleChange(event) {
     setNewWord(newWord + event);
-
+    setIsClipboardDisabled(true); // Disable the "Copy to Clipboard" button when the phrase changes
   }
 
   function handleSelectedWord(word) {
     setPhrase(phrase + word);
     setNewWord('');
-
+    setIsClipboardDisabled(false); // Enable the "Copy to Clipboard" button when the phrase is updated
   }
 
   function handleToggleKeyboard() {
@@ -39,6 +38,12 @@ function App() {
 
   function handleOnDelete() {
     setPhrase(phrase.slice(0, -1));
+    setIsClipboardDisabled(phrase.length <= 2); // Disable if there's only one or two characters left
+  }
+
+  function handleCopyToClipboard() {
+    navigator.clipboard.writeText(phrase);
+    setIsClipboardDisabled(true);
   }
 
   return (
@@ -46,9 +51,18 @@ function App() {
       <Header />
       <div className={styles.main}>
         <TextAreaBox classname={styles.area} value={phrase} onDeletePressed={handleOnDelete} />
-        <button className={`${styles.btnDel}`} onClick={handleOnDelete} disabled={phrase === ''} >
-          DELETE
-        </button>
+        <div className="button-group">
+          <button className={`${styles.btnDel}`} onClick={handleOnDelete} disabled={phrase === ''} >
+            DELETE
+          </button>
+          <button
+            className={`${styles.btnDel}`}
+            onClick={handleCopyToClipboard}
+            disabled={isClipboardDisabled}
+          >
+            Copy to Clipboard
+          </button>
+        </div>
         <div className={styles.kanjiContainer}>
           {newWord !== '' ? (
             <KanjiSuggestion
@@ -75,13 +89,11 @@ function App() {
               <div className="keyboardTitle">KATAKANA</div>
               <CharacterList data-testid="app-kataka-list" characters={katakana} rows={6} handleChange={handleChange} />
             </>
-          )
-          }
+          )}
         </div>
       </div>
       <Footer />
     </div>
-
   );
 }
 
