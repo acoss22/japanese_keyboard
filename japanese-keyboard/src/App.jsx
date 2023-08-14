@@ -17,16 +17,16 @@ function App() {
   const [newWord, setNewWord] = useState('');
   const [phrase, setPhrase] = useState('');
   const [useKeyboard, setUseKeyboard] = useState(true);
-  
+
   function handleChange(event) {
     setNewWord(newWord + event);
-    
+
   }
 
   function handleSelectedWord(word) {
     setPhrase(phrase + word);
     setNewWord('');
-  
+
   }
 
   function handleToggleKeyboard() {
@@ -45,29 +45,39 @@ function App() {
     <div className={styles.page}>
       <Header />
       <div className={styles.main}>
-          <TextAreaBox classname={styles.area} value={phrase} onDeletePressed={handleOnDelete} />
-          <button className={`${styles.btnDel}`} onClick={handleOnDelete} disabled={phrase === ''} >
-            DELETE
-          </button>
-          <div className={styles.kanjiContainer}>
-            {(newWord !== '') ? (
-              <KanjiSuggestion data-testid="app-kanji-suggestion" word={newWord} selectedWordHandler={handleSelectedWord} cancelHandler={handleCancelSuggestion} />
-            ) : (<GenericTutorial text="Select any character or characters from the keyboards and it will be shown to you a suggestion of the corresponding kanjis. Then pick the word from the suggestions."></GenericTutorial>)}
-          </div>
-          <div>
-            <ToggleButton label="Show Keyboards" className={styles.right} value={useKeyboard} showIcons={false} onChange={handleToggleKeyboard}></ToggleButton>
-          </div>
-          <div>
-            {useKeyboard && (
-              <>
-                <div className="keyboardTitle">HIRAGANA</div>
-                <CharacterList data-testid="app-hiragana-list" characters={hiraganas} rows={6} handleChange={handleChange} />
-                <div className="keyboardTitle">KATAKANA</div>
-                <CharacterList data-testid="app-kataka-list" characters={katakana} rows={6} handleChange={handleChange} />
-              </>
-            )
-            }
-          </div>
+        <TextAreaBox classname={styles.area} value={phrase} onDeletePressed={handleOnDelete} />
+        <button className={`${styles.btnDel}`} onClick={handleOnDelete} disabled={phrase === ''} >
+          DELETE
+        </button>
+        <div className={styles.kanjiContainer}>
+          {newWord !== '' ? (
+            <KanjiSuggestion
+              data-testid="app-kanji-suggestion"
+              word={newWord}
+              selectedWordHandler={handleSelectedWord}
+              cancelHandler={handleCancelSuggestion}
+            />
+          ) : (
+            <div className={styles.genericTutorialContainer}>
+              <div className={styles.step}>1. Select any character or characters from the keyboard.</div>
+              <div className={styles.step}>2. Click what you intend to write (kanjis or just a character) from the suggestions.</div>
+            </div>
+          )}
+        </div>
+        <div>
+          <ToggleButton label="Show Keyboards" className={styles.right} value={useKeyboard} showIcons={false} onChange={handleToggleKeyboard}></ToggleButton>
+        </div>
+        <div>
+          {useKeyboard && (
+            <>
+              <div className="keyboardTitle">HIRAGANA</div>
+              <CharacterList data-testid="app-hiragana-list" characters={hiraganas} rows={6} handleChange={handleChange} />
+              <div className="keyboardTitle">KATAKANA</div>
+              <CharacterList data-testid="app-kataka-list" characters={katakana} rows={6} handleChange={handleChange} />
+            </>
+          )
+          }
+        </div>
       </div>
       <Footer />
     </div>
