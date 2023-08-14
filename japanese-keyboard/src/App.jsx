@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "react-toggle/style.css"
 import { hiraganas } from './consts/hiraganaList';
 import { katakana } from './consts/katakana';
@@ -17,14 +17,16 @@ function App() {
   const [newWord, setNewWord] = useState('');
   const [phrase, setPhrase] = useState('');
   const [useKeyboard, setUseKeyboard] = useState(true);
-
+  
   function handleChange(event) {
     setNewWord(newWord + event);
+    
   }
 
   function handleSelectedWord(word) {
     setPhrase(phrase + word);
     setNewWord('');
+  
   }
 
   function handleToggleKeyboard() {
@@ -44,7 +46,7 @@ function App() {
       <Header />
       <div className={styles.main}>
           <TextAreaBox classname={styles.area} value={phrase} onDeletePressed={handleOnDelete} />
-          <button className={styles.btnDel} onClick={handleOnDelete} >
+          <button className={`${styles.btnDel}`} onClick={handleOnDelete} disabled={phrase === ''} >
             DELETE
           </button>
           <div className={styles.kanjiContainer}>

@@ -16,61 +16,74 @@
     flex-direction: column;
     align-items: center;
 
+    .kanjiContainer {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      padding: 5rem 0;
+    }
 
-      .kanjiContainer {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        padding: 5rem 0;
-      }
+    .btnDel:disabled {
+      width: 12rem;
+      height: 4rem;
+      margin: 0.15rem 0;
+      background-color: #ccc;
+      color: #666;
+      cursor: not-allowed;
+      border: none;
+      opacity: 0.7;
+      pointer-events: none; /* Disable click events */
+    }
 
-      .btnDel {
-        width: 12rem;
-        height: 4rem;
-        margin: 0.15rem 0;
-      }
+    button {
+      margin: 0.2rem;
+      padding: 0.7rem 1rem;
     
+      cursor: pointer;
+      border: none;
+      border-radius: 0.4rem;
+      box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 0.5),
+        0px 0px 10px rgba(0, 0, 0, 0.15);
+      background: rgb(2, 0, 36);
+      background: linear-gradient(
+        45deg,
+        rgba(2, 0, 36, 0) 5%,
+        rgba(255, 255, 255, 0.5) 6%,
+        rgba(255, 255, 255, 0) 9%,
+        rgba(255, 255, 255, 0.5) 10%,
+        rgba(255, 255, 255, 0) 17%,
+        rgba(255, 255, 255, 0.5) 19%,
+        rgba(255, 255, 255, 0) 21%
+      );
+      background-size: 150%;
+      background-position: right;
+      transition: 1s;
+
+      /* Style for the disabled button */
+      .btnDel.disabled {
+        background-color: #ccc;
+        color: #666;
+        cursor: not-allowed;
+        border: none;
+        opacity: 0.7;
+        pointer-events: none; /* Disable click events */
+      }
+
+      button:hover {
+        background-position: left;
+        color: #ff69b4;
+        box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 1),
+          0px 0px 10px rgba(0, 0, 0, 0.25);
+      }
+
+      button:focus {
+        outline: none;
+      }
+    }
+    .keyboardTitle {
+      height: 4rem;
+      font-size: 2rem;
+      margin: 5rem;
+    }
   }
-}
-
-button {
-  margin: 0.2rem;
-  padding: 0.7rem 1rem;
-  font-size: 4rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 0.4rem;
-  box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 0.5),
-    0px 0px 10px rgba(0, 0, 0, 0.15);
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    45deg,
-    rgba(2, 0, 36, 0) 5%,
-    rgba(255, 255, 255, 0.5) 6%,
-    rgba(255, 255, 255, 0) 9%,
-    rgba(255, 255, 255, 0.5) 10%,
-    rgba(255, 255, 255, 0) 17%,
-    rgba(255, 255, 255, 0.5) 19%,
-    rgba(255, 255, 255, 0) 21%
-  );
-  background-size: 150%;
-  background-position: right;
-  transition: 1s;
-}
-
-button:hover {
-  background-position: left;
-  color: white;
-  box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 1),
-    0px 0px 10px rgba(0, 0, 0, 0.25);
-}
-
-button:focus {
-  outline: none;
-}
-
-.keyboardTitle {
-  height: 4rem;
-  font-size: 2rem;
-  margin: 5rem;
 }
