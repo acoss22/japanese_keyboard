@@ -6,6 +6,10 @@
   bottom: 0;
 
   .footer_container {
+    background-color: #fff;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     height: $footerHeight;
     width: 100%;
     display: flex;
@@ -13,6 +17,7 @@
     justify-content: center;
 
     .footer {
+      background-color: #fff;
       font-size: $fontSizeFooter;
     }
   }
